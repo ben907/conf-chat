@@ -1,6 +1,3 @@
-Absolutely! Here's a version of your README rewritten in a simpler, more casual style, keeping it closer to how someone might naturally write it instead of a polished, formal style:
-
----
 
 # README.md
 
