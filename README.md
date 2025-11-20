@@ -4,7 +4,6 @@
 **Conf-Chat** is a small peer-to-peer (P2P) chat program written in Python.
 Every instance acts as a **peer**, so there’s no central server—peers talk directly to each other.
 
-This version is simple and easy to run, made mostly for learning purposes and for Assignment 2.
 
 ---
 
@@ -55,26 +54,22 @@ This file handles the user interface:
 3. Open the project in VS Code (or terminal)
 4. Run `chat.py` in different terminals to simulate multiple peers
 
----
+
 
 # How it Works
 
-* You type a username to log in
-* You manually connect to peers using IP + port
-* You can send messages instantly
-* Multiple peers can be connected at the same time
+ -  enter username to "log in"
+ -  connect to other peers by using "connect" command
+ -  can send messages using the "send" command
+ - can connect multiple users to a single port
 
-Extra features like offline messages or group chats could be added later.
-
----
 
 # Example Commands
+connect <ip> <port> - connect to port along with other users
+send <message> - command to send message to all connected users
+exit - exit chat room and stop receiving
 
-```
-connect <ip> <port>    - connect to another peer
-send <message>         - send message to all connected peers
-exit                   - stop the peer
-```
+
 
 ---
 
