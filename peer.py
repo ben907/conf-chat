@@ -10,9 +10,6 @@ class Peer:
         self.running = True
         self.connections = []  # list of connected sockets
 
-    # -------------------------
-    # Start listening for peers
-    # -------------------------
     def start(self):
         listener = threading.Thread(target=self.listen_for_peers)
         listener.daemon = True
@@ -45,9 +42,6 @@ class Peer:
             except:
                 break
 
-    # -------------------------
-    # Connect to another peer
-    # -------------------------
     def connect_to_peer(self, ip, port):
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -58,9 +52,7 @@ class Peer:
         except:
             print("[ERROR] Could not connect")
 
-    # -------------------------
-    # Send a message
-    # -------------------------
+
     def send_message(self, message):
         full_message = f"{self.username}: {message}"
         for conn in self.connections:
@@ -69,9 +61,6 @@ class Peer:
             except:
                 pass
 
-    # -------------------------
-    # Stop peer
-    # -------------------------
     def stop(self):
         self.running = False
         for c in self.connections:
@@ -80,3 +69,4 @@ class Peer:
             except:
                 pass
         print("[INFO] Peer stopped")
+
